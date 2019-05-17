@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief The external header file of OTTemplate
+ *  @brief The external header file of ottemplate
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -22,8 +22,8 @@
 #ifndef OTTEMPLATE_OTTEMPLATE_HXX
 #define OTTEMPLATE_OTTEMPLATE_HXX
 
-#include "ottemplate/MyClassImplementation.hxx"
-#include "ottemplate/MyClass.hxx"
+#include "ottemplate/OTBallImplementation.hxx"
+#include "ottemplate/OTBall.hxx"
 
 #endif // OTTEMPLATE_OTTEMPLATE_HXX
 

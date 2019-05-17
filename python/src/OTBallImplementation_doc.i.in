@@ -1,21 +1,21 @@
-%define OTTEMPLATE_MyClass_doc
-"MyClass class.
+%define OTTEMPLATE_OTBall_doc
+"OTBall class.
 
 Examples
 --------
 >>> import ottemplate
->>> a = ottemplate.MyClass()
+>>> a = ottemplate.OTBall()
 
 Notes
 -----
 Template module class."
 %enddef
-%feature("docstring") OTTEMPLATE::MyClassImplementation
-OTTEMPLATE_MyClass_doc
+%feature("docstring") OTTEMPLATE::OTBallImplementation
+OTTEMPLATE_OTBall_doc
 
 // ---------------------------------------------------------------------
 
-%define OTTEMPLATE_MyClass_square_doc
+%define OTTEMPLATE_OTBall_square_doc
 "Square of a point.
 
 Parameters
@@ -32,12 +32,12 @@ Examples
 --------
 >>> import openturns as ot
 >>> import ottemplate
->>> a = ottemplate.MyClass()
+>>> a = ottemplate.OTBall()
 >>> point = ot.Point([1.0, 2.0, 3.0])
 >>> a.square(point)
 class=Point name=Unnamed dimension=3 values=[1,4,9]"
 %enddef
-%feature("docstring") OTTEMPLATE::MyClassImplementation::square
-OTTEMPLATE_MyClass_square_doc
+%feature("docstring") OTTEMPLATE::OTBallImplementation::square
+OTTEMPLATE_OTBall_square_doc
 
 

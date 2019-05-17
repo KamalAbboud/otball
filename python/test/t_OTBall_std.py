@@ -4,7 +4,7 @@ from __future__ import print_function
 import openturns as ot
 import ottemplate
 
-a = ottemplate.MyClass()
+a = ottemplate.OTBall()
 print(a)
 
 p = ot.Point([2, 3])

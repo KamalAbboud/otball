@@ -17,8 +17,8 @@
 %import uncertainty_module.i
 
 // The new classes
-%include ottemplate/OTTemplateprivate.hxx
-%include MyClassImplementation.i
-%include MyClass.i
+%include ottemplate/ottemplateprivate.hxx
+%include OTBallImplementation.i
+%include OTBall.i
 
 

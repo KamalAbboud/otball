@@ -1,13 +1,13 @@
 #include <iostream>
 
-#include "ottemplate/OTTemplate.hxx"
+#include "ottemplate/ottemplate.hxx"
 
 using namespace OT;
 using namespace OTTEMPLATE;
 
 int main(int argc, char **argv)
 {
-  MyClass a;
+  OTBall a;
   std::cout << a << std::endl;
   return 0;
 }

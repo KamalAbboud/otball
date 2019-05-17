@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief MyClass
+ *  @brief OTBallImplementation
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -18,48 +18,50 @@
  *  along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#ifndef OTTEMPLATE_MYCLASS_HXX
-#define OTTEMPLATE_MYCLASS_HXX
+#ifndef OTTEMPLATE_OTBALLIMPLEMENTATION_HXX
+#define OTTEMPLATE_OTBALLIMPLEMENTATION_HXX
 
-#include <openturns/TypedInterfaceObject.hxx>
+#include <openturns/PersistentObject.hxx>
 #include <openturns/StorageManager.hxx>
 #include <openturns/Point.hxx>
-#include "ottemplate/OTTemplateprivate.hxx"
+#include "ottemplate/ottemplateprivate.hxx"
 
 namespace OTTEMPLATE
 {
 
-/* forward declaration */
-class MyClassImplementation;
-
 /**
- * @class MyClass
+ * @class OTBallImplementation
  *
- * MyClass is some myclass type to illustrate how to add some classes in Open TURNS
+ * OTBallImplementation is some otball type to illustrate how to add some classes in OpenTURNS
  */
-class OTTEMPLATE_API MyClass
-  : public OT::TypedInterfaceObject<MyClassImplementation>
+class OTTEMPLATE_API OTBallImplementation
+  : public OT::PersistentObject
 {
   CLASSNAME;
 
 public:
-
   /** Default constructor */
-  MyClass();
+  OTBallImplementation();
 
-  /** Constructor from implementation */
-  MyClass(const MyClassImplementation & implementation);
+  /** Virtual constructor method */
+  OTBallImplementation * clone() const;
 
-  /** a func that return a point squared. **/
-  OT::Point square(OT::Point & p) const;
+  /** example of a func that return a point squared. **/
+  OT::Point square(OT::Point& p) const;
 
   /** String converter */
   OT::String __repr__() const;
 
+  /** Method save() stores the object through the StorageManager */
+  virtual void save(OT::Advocate & adv) const;
+
+  /** Method load() reloads the object from the StorageManager */
+  virtual void load(OT::Advocate & adv);
+
 private:
 
-}; /* class MyClass */
+}; /* class OTBallImplementation */
 
 } /* namespace OTTEMPLATE */
 
-#endif /* OTTEMPLATE_MYCLASS_HXX */
+#endif /* OTTEMPLATE_OTBALLIMPLEMENTATION_HXX */

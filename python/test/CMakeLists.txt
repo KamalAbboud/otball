@@ -69,7 +69,7 @@ macro ( ot_pyinstallcheck_test TESTNAME )
           )
 endmacro ( ot_pyinstallcheck_test )
 
-ot_pyinstallcheck_test (MyClass_std)
+ot_pyinstallcheck_test (OTBall_std)
 ot_pyinstallcheck_test (docstring)
 
 add_custom_target ( pyinstallcheck COMMAND ${CMAKE_CTEST_COMMAND} -R "^pyinstallcheck_"

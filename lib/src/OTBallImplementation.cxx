@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief MyClassImplementation
+ *  @brief OTBallImplementation
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -18,7 +18,7 @@
  *  along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#include "ottemplate/MyClassImplementation.hxx"
+#include "ottemplate/OTBallImplementation.hxx"
 #include <openturns/PersistentObjectFactory.hxx>
 
 using namespace OT;
@@ -26,26 +26,26 @@ using namespace OT;
 namespace OTTEMPLATE
 {
 
-CLASSNAMEINIT(MyClassImplementation);
+CLASSNAMEINIT(OTBallImplementation);
 
-static Factory<MyClassImplementation> Factory_MyClassImplementation;
+static Factory<OTBallImplementation> Factory_OTBallImplementation;
 
 
 /* Default constructor */
-MyClassImplementation::MyClassImplementation()
+OTBallImplementation::OTBallImplementation()
   : PersistentObject()
 {
   // Nothing to do
 }
 
 /* Virtual constructor method */
-MyClassImplementation * MyClassImplementation::clone() const
+OTBallImplementation * OTBallImplementation::clone() const
 {
-  return new MyClassImplementation(*this);
+  return new OTBallImplementation(*this);
 }
 
 /* example of a func that return a point squared. */
-Point MyClassImplementation::square(Point& p) const
+Point OTBallImplementation::square(Point& p) const
 {
 
   Point p_out(p.getSize());
@@ -57,21 +57,21 @@ Point MyClassImplementation::square(Point& p) const
 }
 
 /* String converter */
-String MyClassImplementation::__repr__() const
+String OTBallImplementation::__repr__() const
 {
   OSS oss;
-  oss << "class=" << MyClassImplementation::GetClassName();
+  oss << "class=" << OTBallImplementation::GetClassName();
   return oss;
 }
 
 /* Method save() stores the object through the StorageManager */
-void MyClassImplementation::save(Advocate & adv) const
+void OTBallImplementation::save(Advocate & adv) const
 {
   PersistentObject::save( adv );
 }
 
 /* Method load() reloads the object from the StorageManager */
-void MyClassImplementation::load(Advocate & adv)
+void OTBallImplementation::load(Advocate & adv)
 {
   PersistentObject::load( adv );
 }

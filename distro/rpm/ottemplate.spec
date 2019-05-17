@@ -38,34 +38,34 @@ Requires:       libottemplate0
 Template module for OpenTURNS library.
 
 %package -n libottemplate0
-Summary:        OTTemplate development files
+Summary:        ottemplate development files
 Group:          Development/Libraries/C and C++
 
 %description -n libottemplate0
-Dynamic libraries for OTTemplate.
+Dynamic libraries for ottemplate.
 
 %package devel
-Summary:        OTTemplate development files
+Summary:        ottemplate development files
 Group:          Development/Libraries/C and C++
 Requires:       libottemplate0 = %{version}
 Requires:       openturns-devel
 
 %description devel
-Development files for OTTemplate library.
+Development files for ottemplate library.
 
 %package examples
-Summary:        OTTemplate examples
+Summary:        ottemplate examples
 Group:          Productivity/Scientific/Math
 
 %description examples
-Example files for OTTemplate
+Example files for ottemplate
 
 %package -n python-%{name}
-Summary:        OTTemplate library
+Summary:        ottemplate library
 Group:          Productivity/Scientific/Math
 Requires:       python-openturns
 %description -n python-%{name}
-Python textual interface to OTTemplate uncertainty library
+Python textual interface to ottemplate uncertainty library
 
 %prep
 %setup -q

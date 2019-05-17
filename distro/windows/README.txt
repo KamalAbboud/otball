@@ -10,7 +10,7 @@ Installation
     print ottemplate.__version__
 
 Uninstallation
-  OTTemplate module will be automatically uninstalled at OpenTURNS removal.
-  OTTemplate module can be removed from OpenTURNS with uninst-template.exe uninstaller.
+  ottemplate module will be automatically uninstalled at OpenTURNS removal.
+  ottemplate module can be removed from OpenTURNS with uninst-template.exe uninstaller.
   Silent uninstall can be done with the switch /S.
 

@@ -2,11 +2,11 @@
 
 ot_add_current_dir_to_include_dirs ()
 
-ot_add_source_file ( MyClass.cxx )
-ot_add_source_file ( MyClassImplementation.cxx )
+ot_add_source_file ( OTBall.cxx )
+ot_add_source_file ( OTBallImplementation.cxx )
 
-ot_install_header_file ( MyClass.hxx )
-ot_install_header_file ( MyClassImplementation.hxx )
+ot_install_header_file ( OTBall.hxx )
+ot_install_header_file ( OTBallImplementation.hxx )
 
 
 include_directories (${INTERNAL_INCLUDE_DIRS})
@@ -28,15 +28,15 @@ set_target_properties ( ottemplate PROPERTIES SOVERSION ${LIB_SOVERSION} )
 target_link_libraries (ottemplate ${OPENTURNS_LIBRARY})
 
 # Add targets to the build-tree export set
-export (TARGETS ottemplate FILE ${PROJECT_BINARY_DIR}/OTTemplate-Targets.cmake)
+export (TARGETS ottemplate FILE ${PROJECT_BINARY_DIR}/ottemplate-Targets.cmake)
 
 # Install the export set for use with the install-tree
-install(EXPORT OTTemplate-Targets
+install(EXPORT ottemplate-Targets
         DESTINATION "${OTTEMPLATE_CONFIG_CMAKE_PATH}"
         COMPONENT Development)
 
 install(TARGETS ottemplate
-        EXPORT  OTTemplate-Targets 
+        EXPORT  ottemplate-Targets 
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION ${OTTEMPLATE_LIBRARY_PATH}
         ARCHIVE DESTINATION ${OTTEMPLATE_LIBRARY_PATH}

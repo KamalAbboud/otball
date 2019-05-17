@@ -1,0 +1,7 @@
+// OTBall docstrings are defined in OTBallImplementation_doc.i.in
+
+%feature("docstring") OTTEMPLATE::OTBall
+OTTEMPLATE_OTBall_doc
+%feature("docstring") OTTEMPLATE::OTBall::square
+OTTEMPLATE_OTBall_square_doc
+

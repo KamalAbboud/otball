@@ -1,6 +1,6 @@
 //                                               -*- C++ -*-
 /**
- *  @brief MyClass
+ *  @brief OTBall
  *
  *  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
  *
@@ -18,44 +18,48 @@
  *  along with this library.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-#include "ottemplate/MyClass.hxx"
-#include "ottemplate/MyClassImplementation.hxx"
-#include <openturns/PersistentObjectFactory.hxx>
+#ifndef OTTEMPLATE_OTBALL_HXX
+#define OTTEMPLATE_OTBALL_HXX
 
-using namespace OT;
+#include <openturns/TypedInterfaceObject.hxx>
+#include <openturns/StorageManager.hxx>
+#include <openturns/Point.hxx>
+#include "ottemplate/ottemplateprivate.hxx"
 
 namespace OTTEMPLATE
 {
 
-CLASSNAMEINIT(MyClass);
+/* forward declaration */
+class OTBallImplementation;
 
-/* Default constructor */
-MyClass::MyClass()
-  : TypedInterfaceObject<MyClassImplementation>(new MyClassImplementation)
+/**
+ * @class OTBall
+ *
+ * OTBall is some otball type to illustrate how to add some classes in Open TURNS
+ */
+class OTTEMPLATE_API OTBall
+  : public OT::TypedInterfaceObject<OTBallImplementation>
 {
-  // Nothing to do
-}
+  CLASSNAME;
 
+public:
 
-MyClass::MyClass(const MyClassImplementation & implementation)
-  : TypedInterfaceObject<MyClassImplementation>(implementation.clone())
-{
-  // Nothing to do
-}
+  /** Default constructor */
+  OTBall();
 
-Point MyClass::square(Point & p) const
-{
-  return getImplementation()->square(p);
-}
+  /** Constructor from implementation */
+  OTBall(const OTBallImplementation & implementation);
 
-/* String converter */
-String MyClass::__repr__() const
-{
-  OSS oss;
-  oss << "class=" << MyClass::GetClassName()
-      << " implementation=" << getImplementation()->__repr__();
-  return oss;
-}
+  /** a func that return a point squared. **/
+  OT::Point square(OT::Point & p) const;
 
+  /** String converter */
+  OT::String __repr__() const;
+
+private:
+
+}; /* class OTBall */
 
 } /* namespace OTTEMPLATE */
+
+#endif /* OTTEMPLATE_OTBALL_HXX */

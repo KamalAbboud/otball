@@ -9,7 +9,7 @@ if ( NOT DEFINED CMAKE_BUILD_TYPE )
    set( CMAKE_BUILD_TYPE Release CACHE STRING "Build type")
 endif ()
 
-project (OTTemplate)
+project (ottemplate)
 
 string ( TOLOWER ${CMAKE_PROJECT_NAME} PACKAGE_NAME )
 
@@ -204,11 +204,11 @@ set ( OTTEMPLATE_VERSION_STRING ${PACKAGE_VERSION} )
 set ( OTTEMPLATE_VERSION_MAJOR ${CPACK_PACKAGE_VERSION_MAJOR} )
 set ( OTTEMPLATE_VERSION_MINOR ${CPACK_PACKAGE_VERSION_MINOR} )
 set ( OTTEMPLATE_VERSION_PATCH ${CPACK_PACKAGE_VERSION_PATCH} )
-set ( OTTEMPLATE_USE_FILE      ${CONFIG_CMAKE_PATH}/UseOTTemplate.cmake )
+set ( OTTEMPLATE_USE_FILE      ${CONFIG_CMAKE_PATH}/Useottemplate.cmake )
 
 include(CMakePackageConfigHelpers)
-configure_package_config_file (cmake/OTTemplateConfig.cmake.in
-  ${CMAKE_CURRENT_BINARY_DIR}/OTTemplateConfig.cmake
+configure_package_config_file (cmake/ottemplateConfig.cmake.in
+  ${CMAKE_CURRENT_BINARY_DIR}/ottemplateConfig.cmake
   INSTALL_DESTINATION ${OTTEMPLATE_CONFIG_CMAKE_PATH}
   PATH_VARS
     OTTEMPLATE_USE_FILE
@@ -219,11 +219,11 @@ configure_package_config_file (cmake/OTTemplateConfig.cmake.in
     PYTHON_MODULE_PATH
   NO_CHECK_REQUIRED_COMPONENTS_MACRO)
 
-write_basic_package_version_file (OTTemplateConfigVersion.cmake VERSION ${OTTEMPLATE_VERSION_STRING} COMPATIBILITY AnyNewerVersion)
+write_basic_package_version_file (ottemplateConfigVersion.cmake VERSION ${OTTEMPLATE_VERSION_STRING} COMPATIBILITY AnyNewerVersion)
 
-install (FILES cmake/UseOTTemplate.cmake
-               ${CMAKE_CURRENT_BINARY_DIR}/OTTemplateConfig.cmake
-               ${CMAKE_CURRENT_BINARY_DIR}/OTTemplateConfigVersion.cmake
+install (FILES cmake/Useottemplate.cmake
+               ${CMAKE_CURRENT_BINARY_DIR}/ottemplateConfig.cmake
+               ${CMAKE_CURRENT_BINARY_DIR}/ottemplateConfigVersion.cmake
          DESTINATION ${OTTEMPLATE_CONFIG_CMAKE_PATH})
 
 include (CPack)

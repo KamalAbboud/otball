@@ -1,8 +1,8 @@
 #                                               -*- cmake -*-
 #
-#  UseOTTemplate.cmake
+#  Useottemplate.cmake
 #
-#  Use OTTemplate in CMake files
+#  Use ottemplate in CMake files
 #
 #  Copyright 2005-2019 Airbus-EDF-IMACS-ONERA-Phimeca
 #
